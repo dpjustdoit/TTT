@@ -14,5 +14,5 @@ protocol SelectionPresenter: class {
     var interactor: SelectionInteractor? { get set }
     var view: SelectionViewController? { get set }
 
-    func didSelect(mark: String)
+    func didSelect(xmarkFirstGame: Bool)
 }

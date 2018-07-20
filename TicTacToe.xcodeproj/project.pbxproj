@@ -40,6 +40,8 @@
 		E2DEE3C021023198005725C9 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DEE3B621023198005725C9 /* GameViewController.swift */; };
 		E2DEE3C121023198005725C9 /* GameInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DEE3B721023198005725C9 /* GameInteractor.swift */; };
 		E2DEE3C221023198005725C9 /* GameRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DEE3B821023198005725C9 /* GameRouter.swift */; };
+		E2DEE3C521026913005725C9 /* UICollectionViewCell+ReuseIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DEE3C421026913005725C9 /* UICollectionViewCell+ReuseIdentifier.swift */; };
+		E2DEE3C7210269A0005725C9 /* GameCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DEE3C6210269A0005725C9 /* GameCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +101,8 @@
 		E2DEE3B621023198005725C9 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		E2DEE3B721023198005725C9 /* GameInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameInteractor.swift; sourceTree = "<group>"; };
 		E2DEE3B821023198005725C9 /* GameRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameRouter.swift; sourceTree = "<group>"; };
+		E2DEE3C421026913005725C9 /* UICollectionViewCell+ReuseIdentifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+ReuseIdentifier.swift"; sourceTree = "<group>"; };
+		E2DEE3C6210269A0005725C9 /* GameCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +183,7 @@
 		E2DEE35E210224EB005725C9 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				E2DEE3C321026913005725C9 /* Extensions */,
 				E2DEE3802102281F005725C9 /* Entity */,
 				E2DEE35F210224EB005725C9 /* Common */,
 				E2DEE360210224EB005725C9 /* Modules */,
@@ -288,6 +293,7 @@
 			isa = PBXGroup;
 			children = (
 				E2DEE3AC21023198005725C9 /* Game.storyboard */,
+				E2DEE3C6210269A0005725C9 /* GameCollectionViewCell.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -321,6 +327,14 @@
 				E2DEE3B821023198005725C9 /* GameRouter.swift */,
 			);
 			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		E2DEE3C321026913005725C9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E2DEE3C421026913005725C9 /* UICollectionViewCell+ReuseIdentifier.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -467,6 +481,7 @@
 				E2DEE3852102281F005725C9 /* Game.swift in Sources */,
 				E2DEE3C121023198005725C9 /* GameInteractor.swift in Sources */,
 				E2DEE3862102281F005725C9 /* Player.swift in Sources */,
+				E2DEE3C521026913005725C9 /* UICollectionViewCell+ReuseIdentifier.swift in Sources */,
 				E2DEE3BF21023198005725C9 /* GamePresenter.swift in Sources */,
 				E2DEE38821022856005725C9 /* BaseViewController.swift in Sources */,
 				E2DEE3BE21023198005725C9 /* GameDefaultBuilder.swift in Sources */,
@@ -482,6 +497,7 @@
 				E2DEE371210224EB005725C9 /* SelectionDefaultPresenter.swift in Sources */,
 				E2DEE38B21022F9C005725C9 /* CoordinationNavigationViewController.swift in Sources */,
 				E2DEE38D21022FBE005725C9 /* BaseNavigationController.swift in Sources */,
+				E2DEE3C7210269A0005725C9 /* GameCollectionViewCell.swift in Sources */,
 				E2DEE33121022406005725C9 /* AppDelegate.swift in Sources */,
 				E2DEE3BD21023198005725C9 /* GameDefaultPresenter.swift in Sources */,
 				E2DEE372210224EB005725C9 /* SelectionDefaultRouter.swift in Sources */,

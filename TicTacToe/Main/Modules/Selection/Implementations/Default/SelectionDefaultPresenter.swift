@@ -14,7 +14,7 @@ class SelectionDefaultPresenter: SelectionPresenter {
     var interactor: SelectionInteractor?
     weak var view: SelectionViewController?
 
-    func didSelect(mark: String) {
-        self.router?.routeForMark(mark: mark)
+    func didSelect(xmarkFirstGame: Bool) {
+        self.router?.routeForMark(xmarkFirstGame: xmarkFirstGame)
     }
 }

@@ -11,5 +11,5 @@ import Foundation
 struct Player {
     let playerName: String
     let playerId: String
-    var position: [IndexPath]
+    var positions: [IndexPath]
 }

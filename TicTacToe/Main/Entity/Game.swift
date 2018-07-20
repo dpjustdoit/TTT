@@ -11,14 +11,21 @@ import Foundation
 typealias GameResult = (success: Bool, message: String)
 
 class Game {
+
+    static let shared = Game()
+
+    let boardSize: Int = 3
     var players: [Player] = []
-    var currentPlayerIndex: Int = 0
+    var isGameInProgress: Bool {
+        return !self.players.isEmpty
+    }
+
+    private var currentPlayerIndex: Int = 0
 
     func checkWinner() -> GameResult {
         return (false, "")
     }
 
-    init(players: [Player]) {
-        self.players = players
+    init() {
     }
 }

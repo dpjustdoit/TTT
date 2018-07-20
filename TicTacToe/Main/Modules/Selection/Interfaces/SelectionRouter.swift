@@ -12,5 +12,5 @@ protocol SelectionRouter {
 
     var presenter: SelectionPresenter? { get set }
 
-    func routeForMark(mark: String)
+    func routeForMark(xmarkFirstGame: Bool)
 }

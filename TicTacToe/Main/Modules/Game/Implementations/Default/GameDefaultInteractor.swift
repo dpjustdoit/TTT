@@ -13,4 +13,24 @@ class GameDefaultInteractor: GameInteractor {
 
     weak var presenter: GamePresenter?
 
+    func set(xmarkFirstGame: Bool) -> Game {
+        
+        let firstPlayer = xmarkFirstGame ? Player(playerName: "X",
+                                              playerId: "X",
+                                              positions: []) : Player(playerName: "O",
+                                                                      playerId: "O",
+                                                                      positions: [])
+        let secondPlayer =  xmarkFirstGame ? Player(playerName: "O",
+                                                playerId: "O",
+                                                positions: []) : Player(playerName: "X",
+                                                                        playerId: "X",
+                                                                        positions: [])
+        Game.shared.players = [firstPlayer, secondPlayer]
+
+        return Game.shared
+    }
+
+    func resetGame() {
+        Game.shared.players = []
+    }
 }

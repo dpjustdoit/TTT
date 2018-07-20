@@ -11,4 +11,7 @@ import Foundation
 protocol GameInteractor {
 
     var presenter: GamePresenter? { get set }
+
+    func set(xmarkFirstGame: Bool) -> Game
+    func resetGame()
 }

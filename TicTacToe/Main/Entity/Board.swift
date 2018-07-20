@@ -7,9 +7,18 @@
 //
 
 struct Board {
+
+    var numberOfSections: Int {
+        return grid.count
+    }
+
+    var numberOfItemsInSection: Int {
+        return grid[0].count
+    }
+    
     let grid: [[Cell]]
 }
 
 struct Cell {
-    let imageName: String
+    var imageName: String = ""
 }

@@ -11,8 +11,5 @@ import Foundation
 protocol GameViewController: class {
 
     var presenter: GamePresenter? { get set }
-    @IBOutlet weak var gameCollectionView: UICollectionView!
-
-
-    
+    var board: Board? { get set }
 }

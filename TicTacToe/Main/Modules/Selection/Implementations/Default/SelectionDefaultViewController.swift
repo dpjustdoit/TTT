@@ -17,11 +17,11 @@ class SelectionDefaultViewController: BaseViewController, SelectionViewControlle
 extension SelectionDefaultViewController {
 
     @IBAction func startXButtonPressed(_ sender: Any) {
-        self.presenter?.didSelect(mark: "X")
+        self.presenter?.didSelect(xmarkFirstGame: true)
     }
 
 
     @IBAction func startOButtonPressed(_ sender: Any) {
-        self.presenter?.didSelect(mark: "O")
+        self.presenter?.didSelect(xmarkFirstGame: false)
     }
 }

@@ -13,4 +13,8 @@ protocol GamePresenter: class {
     var router: GameRouter? { get set }
     var interactor: GameInteractor? { get set }
     var view: GameViewController? { get set }
+    var xmarkFirstGame: Bool { get set }
+
+    func viewDidLoad()
+    func viewDidDisappear(_ animated: Bool)
 }

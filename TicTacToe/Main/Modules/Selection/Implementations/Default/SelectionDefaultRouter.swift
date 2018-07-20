@@ -14,8 +14,8 @@ class SelectionDefaultRouter: SelectionRouter {
     weak var presenter: SelectionPresenter?
     weak var viewController: UIViewController?
 
-    func routeForMark(mark: String) {
-        let viewController = GameDefaultBuilder().main()
+    func routeForMark(xmarkFirstGame: Bool) {
+        let viewController = GameDefaultBuilder().main(xmarkFirstGame: xmarkFirstGame)
         self.viewController?.navigationController?.pushViewController(viewController, animated: true)
     }
 }
