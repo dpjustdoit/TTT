@@ -10,6 +10,6 @@ import Foundation
 
 struct Player {
     let playerName: String
-    let playerId: String
+    let imageName: String
     var positions: [IndexPath]
 }

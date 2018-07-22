@@ -15,6 +15,7 @@ protocol GamePresenter: class {
     var view: GameViewController? { get set }
     var xmarkFirstGame: Bool { get set }
 
-    func viewDidLoad()
-    func viewDidDisappear(_ animated: Bool)
+    func loadData()
+    func resetData()
+    func selectData(indexPath: IndexPath)
 }

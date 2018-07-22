@@ -18,14 +18,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="21M-tP-WqV">
-                                <rect key="frame" x="10" y="134" width="300" height="300"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="5" y="129" width="310" height="310"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="O8I-xD-sl7"/>
-                                    <constraint firstAttribute="width" constant="300" id="a1a-v1-4bC"/>
+                                    <constraint firstAttribute="height" constant="310" id="O8I-xD-sl7"/>
+                                    <constraint firstAttribute="width" constant="310" id="a1a-v1-4bC"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="LSu-p3-pJc">
-                                    <size key="itemSize" width="50" height="50"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="LSu-p3-pJc">
+                                    <size key="itemSize" width="100" height="100"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -43,13 +43,13 @@
                                                 </imageView>
                                             </subviews>
                                         </view>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="czi-fJ-R9E" secondAttribute="trailing" id="85t-zX-8n9"/>
                                             <constraint firstItem="czi-fJ-R9E" firstAttribute="top" secondItem="ExM-lD-dCR" secondAttribute="top" id="RYY-lG-gNk"/>
                                             <constraint firstAttribute="bottom" secondItem="czi-fJ-R9E" secondAttribute="bottom" id="j0R-Ah-hpM"/>
                                             <constraint firstItem="czi-fJ-R9E" firstAttribute="leading" secondItem="ExM-lD-dCR" secondAttribute="leading" id="ykq-oF-2mi"/>
                                         </constraints>
-                                        <size key="customSize" width="100" height="100"/>
                                         <connections>
                                             <outlet property="imageView" destination="czi-fJ-R9E" id="NaX-ly-fwH"/>
                                         </connections>
@@ -60,9 +60,9 @@
                                     <outlet property="delegate" destination="MoN-cd-Qo8" id="1lg-w4-Uzr"/>
                                 </connections>
                             </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X's turn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="caZ-aj-zba">
-                                <rect key="frame" x="130.5" y="527" width="59.5" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="turnLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="caZ-aj-zba">
+                                <rect key="frame" x="119.5" y="524" width="82.5" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -78,6 +78,7 @@
                     </view>
                     <connections>
                         <outlet property="gameCollectionView" destination="21M-tP-WqV" id="d8z-Ti-UAa"/>
+                        <outlet property="turnLabel" destination="caZ-aj-zba" id="xWm-fh-uhn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PKR-TA-9Re" userLabel="First Responder" sceneMemberID="firstResponder"/>

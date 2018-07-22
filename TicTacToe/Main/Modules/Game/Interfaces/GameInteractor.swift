@@ -12,6 +12,8 @@ protocol GameInteractor {
 
     var presenter: GamePresenter? { get set }
 
-    func set(xmarkFirstGame: Bool) -> Game
+    func gameBoard(xmarkFirstGame: Bool) -> GameBoard
+    func currentPlayerName() -> String
     func resetGame()
+    func makeMove(indexPath: IndexPath) -> GameResult
 }

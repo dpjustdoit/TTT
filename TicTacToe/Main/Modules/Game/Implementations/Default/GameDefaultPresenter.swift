@@ -10,6 +10,12 @@ import Foundation
 
 class GameDefaultPresenter: GamePresenter {
 
+    fileprivate enum Constants {
+        static let drawMessage = "A draw"
+        static let turnMessage = "'s turn"
+        static let winMessage = " wins"
+    }
+
     var router: GameRouter?
     var interactor: GameInteractor?
     weak var view: GameViewController?
@@ -20,27 +26,41 @@ class GameDefaultPresenter: GamePresenter {
         self.xmarkFirstGame = xmarkFirstGame
     }
 
-    func viewDidLoad() {
+    func loadData() {
+        let gameBoard = self.interactor?.gameBoard(xmarkFirstGame: self.xmarkFirstGame)
+        self.view?.gameBoard = gameBoard
+        self.view?.updateTurnUI(message: self.nextMoveMessage())
+    }
+
+    func resetData() {
+        self.interactor?.resetGame()
+    }
+
+    func selectData(indexPath: IndexPath) {
 
         guard let interactor = self.interactor else {
             return
         }
-        let game = interactor.set(xmarkFirstGame: self.xmarkFirstGame)
-        let board = self.board(game: game)
-        self.view?.board = board
-    }
 
-    func viewDidDisappear(_ animated: Bool) {
-        self.interactor?.resetGame()
-    }
+        let result = interactor.makeMove(indexPath: indexPath)
+        self.view?.gameBoard = result.board
 
-    func board(game: Game) -> Board {
-        var grid: [[Cell]] = []
-        (0..<game.boardSize).forEach{_ in
-            grid.append(Array(repeating: Cell(), count: game.boardSize))
+        guard !result.isGameFinished else {
+            let title = result.isDraw ? Constants.drawMessage : "\(interactor.currentPlayerName())" + Constants.winMessage
+            self.view?.showGameOver(title: title, handler: {
+                self.router?.routeForEndGame()
+            })
+            return
         }
-        let board = Board(grid: grid)
 
-        return board
+        self.view?.updateTurnUI(message: self.nextMoveMessage())
+    }
+
+    private func nextMoveMessage() -> String {
+
+        guard let interactor = self.interactor else {
+            return ""
+        }
+        return "\(interactor.currentPlayerName())" + Constants.turnMessage
     }
 }

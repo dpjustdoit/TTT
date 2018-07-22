@@ -14,4 +14,7 @@ class GameDefaultRouter: GameRouter {
     weak var presenter: GamePresenter?
     weak var viewController: UIViewController?
 
+    func routeForEndGame() {
+        self.viewController?.navigationController?.popViewController(animated: true)
+    }
 }

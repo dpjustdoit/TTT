@@ -11,5 +11,8 @@ import Foundation
 protocol GameViewController: class {
 
     var presenter: GamePresenter? { get set }
-    var board: Board? { get set }
+
+    var gameBoard: GameBoard? { get set }
+    func updateTurnUI(message: String)
+    func showGameOver(title: String, handler: @escaping (() -> ()))
 }

@@ -11,4 +11,6 @@ import Foundation
 protocol GameRouter {
 
     var presenter: GamePresenter? { get set }
+
+    func routeForEndGame()
 }
