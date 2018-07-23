@@ -8,19 +8,22 @@
 
 import Foundation
 import UIKit
+import GoogleMobileAds
 
 class GameDefaultViewController: BaseViewController, GameViewController {
 
     fileprivate enum Constants {
         static let bottomSectionInset: CGFloat = 5
         static let okButtonTitle = "OK"
+        static let adUnitID = "ca-app-pub-3940256099942544/2934735716"
     }
 
     var presenter: GamePresenter?
 
     @IBOutlet weak var gameCollectionView: UICollectionView!
     @IBOutlet weak var turnLabel: UILabel!
-    
+    @IBOutlet weak var bannerView: GADBannerView!
+
     var gameBoard: GameBoard? {
         didSet {
             self.gameCollectionView.reloadData()
@@ -47,7 +50,12 @@ class GameDefaultViewController: BaseViewController, GameViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         self.presenter?.loadData()
+
+        self.bannerView.adUnitID = Constants.adUnitID
+        self.bannerView.load(GADRequest())
+
     }
 
     deinit {

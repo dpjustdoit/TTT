@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Game Default View Controller-->
+        <!--Root View Controller-->
         <scene sceneID="Ba0-nD-kqw">
             <objects>
                 <viewController id="MoN-cd-Qo8" customClass="GameDefaultViewController" customModule="TicTacToe" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,8 +17,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nqr-gV-je5" customClass="GADBannerView">
+                                <rect key="frame" x="0.0" y="20" width="320" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="RcG-rY-Qgb"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="rootViewController" destination="MoN-cd-Qo8" id="Obq-yd-CeA"/>
+                                </connections>
+                            </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="21M-tP-WqV">
-                                <rect key="frame" x="5" y="129" width="310" height="310"/>
+                                <rect key="frame" x="5" y="154" width="310" height="310"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="310" id="O8I-xD-sl7"/>
@@ -69,14 +79,18 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="21M-tP-WqV" firstAttribute="centerY" secondItem="mxw-5j-Iv5" secondAttribute="centerY" id="KJ8-pr-vGl"/>
+                            <constraint firstItem="nqr-gV-je5" firstAttribute="leading" secondItem="L7h-n0-Zdm" secondAttribute="leading" id="3V2-pO-IsJ"/>
+                            <constraint firstItem="L7h-n0-Zdm" firstAttribute="top" secondItem="nqr-gV-je5" secondAttribute="top" id="3wa-gZ-9U7"/>
+                            <constraint firstItem="21M-tP-WqV" firstAttribute="centerY" secondItem="mxw-5j-Iv5" secondAttribute="centerY" constant="25" id="KJ8-pr-vGl"/>
                             <constraint firstItem="L7h-n0-Zdm" firstAttribute="bottom" secondItem="caZ-aj-zba" secondAttribute="bottom" constant="20" id="PBF-TN-bIl"/>
+                            <constraint firstItem="L7h-n0-Zdm" firstAttribute="trailing" secondItem="nqr-gV-je5" secondAttribute="trailing" id="nbd-Kp-tro"/>
                             <constraint firstItem="21M-tP-WqV" firstAttribute="centerX" secondItem="mxw-5j-Iv5" secondAttribute="centerX" id="xqc-2O-zC4"/>
                             <constraint firstItem="caZ-aj-zba" firstAttribute="centerX" secondItem="L7h-n0-Zdm" secondAttribute="centerX" id="yzy-OM-bqo"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="L7h-n0-Zdm"/>
                     </view>
                     <connections>
+                        <outlet property="bannerView" destination="nqr-gV-je5" id="Fj5-m4-dQS"/>
                         <outlet property="gameCollectionView" destination="21M-tP-WqV" id="d8z-Ti-UAa"/>
                         <outlet property="turnLabel" destination="caZ-aj-zba" id="xWm-fh-uhn"/>
                     </connections>

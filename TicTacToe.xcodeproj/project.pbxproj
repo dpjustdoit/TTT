@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E26A09532105BCEB0016533D /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E26A09512105BCEB0016533D /* GoogleMobileAds.framework */; };
+		E26A09542105BCEB0016533D /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = E26A09522105BCEB0016533D /* README.txt */; };
 		E2DEE33121022406005725C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DEE33021022406005725C9 /* AppDelegate.swift */; };
 		E2DEE33821022406005725C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2DEE33721022406005725C9 /* Assets.xcassets */; };
 		E2DEE33B21022406005725C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2DEE33921022406005725C9 /* LaunchScreen.storyboard */; };
@@ -62,6 +64,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E26A09512105BCEB0016533D /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
+		E26A09522105BCEB0016533D /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		E2DEE32D21022406005725C9 /* TicTacToe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicTacToe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2DEE33021022406005725C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2DEE33721022406005725C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -110,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E26A09532105BCEB0016533D /* GoogleMobileAds.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,6 +135,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E26A094F2105BCEB0016533D /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				E26A09502105BCEB0016533D /* GoogleMobileAdsSdkiOS-7.31.0 */,
+			);
+			path = ThirdParty;
+			sourceTree = "<group>";
+		};
+		E26A09502105BCEB0016533D /* GoogleMobileAdsSdkiOS-7.31.0 */ = {
+			isa = PBXGroup;
+			children = (
+				E26A09512105BCEB0016533D /* GoogleMobileAds.framework */,
+				E26A09522105BCEB0016533D /* README.txt */,
+			);
+			path = "GoogleMobileAdsSdkiOS-7.31.0";
+			sourceTree = "<group>";
+		};
 		E2DEE32421022406005725C9 = {
 			isa = PBXGroup;
 			children = (
@@ -158,6 +180,7 @@
 				E2DEE33721022406005725C9 /* Assets.xcassets */,
 				E2DEE33921022406005725C9 /* LaunchScreen.storyboard */,
 				E2DEE33C21022406005725C9 /* Info.plist */,
+				E26A094F2105BCEB0016533D /* ThirdParty */,
 			);
 			path = TicTacToe;
 			sourceTree = "<group>";
@@ -448,6 +471,7 @@
 				E2DEE391210230A9005725C9 /* Selection.storyboard in Resources */,
 				E2DEE33821022406005725C9 /* Assets.xcassets in Resources */,
 				E2DEE3B921023198005725C9 /* Game.storyboard in Resources */,
+				E26A09542105BCEB0016533D /* README.txt in Resources */,
 				E2DEE393210230BD005725C9 /* Coordination.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -660,6 +684,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W72RRSEZ63;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TicTacToe/ThirdParty/GoogleMobileAdsSdkiOS-7.31.0",
+				);
 				INFOPLIST_FILE = TicTacToe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dp.TicTacToe;
@@ -675,6 +703,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W72RRSEZ63;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TicTacToe/ThirdParty/GoogleMobileAdsSdkiOS-7.31.0",
+				);
 				INFOPLIST_FILE = TicTacToe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dp.TicTacToe;
