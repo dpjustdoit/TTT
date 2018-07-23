@@ -14,6 +14,8 @@ class GameDefaultViewController: BaseViewController, GameViewController {
 
     fileprivate enum Constants {
         static let bottomSectionInset: CGFloat = 5
+        static let animationDuration: Double = 2
+        static let animationDelay: Double = 0.25
         static let okButtonTitle = "OK"
         static let shareButtonTitle = "SHARE"
         static let shareTitle = "Here we go"
@@ -23,7 +25,7 @@ class GameDefaultViewController: BaseViewController, GameViewController {
     var presenter: GamePresenter?
 
     @IBOutlet weak var gameCollectionView: UICollectionView!
-    @IBOutlet weak var turnLabel: UILabel!
+    @IBOutlet weak var turnLabel: LTMorphingLabel!
     @IBOutlet weak var bannerView: GADBannerView!
 
     var gameBoard: GameBoard? {
@@ -33,6 +35,13 @@ class GameDefaultViewController: BaseViewController, GameViewController {
     }
 
     func updateTurnUI(message: String) {
+
+        let effectValue = Int(arc4random_uniform(UInt32(LTMorphingEffect.allValues.count)))
+        
+        if let effect = LTMorphingEffect(rawValue: effectValue) {
+            self.turnLabel.morphingEffect = effect
+        }
+
         self.turnLabel.text = message
     }
 
@@ -73,12 +82,25 @@ class GameDefaultViewController: BaseViewController, GameViewController {
 
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.showStartAnimation()
+    }
+
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
 
         if self.isMovingFromParentViewController {
             self.presenter?.resetData()
         }
+    }
+
+    func showStartAnimation() {
+        self.gameCollectionView.transform = CGAffineTransform(scaleX: 0, y: 0)
+
+        UIView.animate(withDuration: Constants.animationDuration, delay: Constants.animationDelay, options: UIViewAnimationOptions.curveEaseOut, animations: {
+            self.gameCollectionView.transform = .identity
+        }, completion: nil)
     }
 }
 
