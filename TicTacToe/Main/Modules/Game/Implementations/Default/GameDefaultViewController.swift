@@ -15,6 +15,8 @@ class GameDefaultViewController: BaseViewController, GameViewController {
     fileprivate enum Constants {
         static let bottomSectionInset: CGFloat = 5
         static let okButtonTitle = "OK"
+        static let shareButtonTitle = "SHARE"
+        static let shareTitle = "Here we go"
         static let adUnitID = "ca-app-pub-3940256099942544/2934735716"
     }
 
@@ -44,7 +46,19 @@ class GameDefaultViewController: BaseViewController, GameViewController {
             handler()
         })
 
+        let shareAction = UIAlertAction(title: Constants.shareButtonTitle, style: .default, handler: { action in
+
+            if let snapshot = self.navigationController?.view.snapshot {
+                let activityViewController = UIActivityViewController(activityItems: [Constants.shareTitle, snapshot], applicationActivities: nil)
+                activityViewController.completionWithItemsHandler = { activity, success, items, error in
+                    handler()
+                }
+                self.present(activityViewController, animated: true, completion: nil)
+            }
+        })
+
         alert.addAction(okAction)
+        alert.addAction(shareAction)
 
         self.present(alert, animated: true, completion: nil)
     }

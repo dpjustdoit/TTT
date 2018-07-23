@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		E23B91982105CE5200E621C3 /* GameSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23B91972105CE5200E621C3 /* GameSaver.swift */; };
 		E23B91CC2105DC3000E621C3 /* CoordinationDefaultBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23B91CB2105DC3000E621C3 /* CoordinationDefaultBuilder.swift */; };
+		E23B91D02105FD8500E621C3 /* UIView+Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23B91CF2105FD8500E621C3 /* UIView+Snapshot.swift */; };
 		E26A09532105BCEB0016533D /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E26A09512105BCEB0016533D /* GoogleMobileAds.framework */; };
 		E26A09542105BCEB0016533D /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = E26A09522105BCEB0016533D /* README.txt */; };
 		E2DEE33121022406005725C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DEE33021022406005725C9 /* AppDelegate.swift */; };
@@ -68,6 +69,7 @@
 /* Begin PBXFileReference section */
 		E23B91972105CE5200E621C3 /* GameSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSaver.swift; sourceTree = "<group>"; };
 		E23B91CB2105DC3000E621C3 /* CoordinationDefaultBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinationDefaultBuilder.swift; sourceTree = "<group>"; };
+		E23B91CF2105FD8500E621C3 /* UIView+Snapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Snapshot.swift"; sourceTree = "<group>"; };
 		E26A09512105BCEB0016533D /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
 		E26A09522105BCEB0016533D /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		E2DEE32D21022406005725C9 /* TicTacToe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicTacToe.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -362,6 +364,7 @@
 			isa = PBXGroup;
 			children = (
 				E2DEE3C421026913005725C9 /* UICollectionViewCell+ReuseIdentifier.swift */,
+				E23B91CF2105FD8500E621C3 /* UIView+Snapshot.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -524,6 +527,7 @@
 				E2DEE377210224EB005725C9 /* SelectionViewController.swift in Sources */,
 				E2DEE3C221023198005725C9 /* GameRouter.swift in Sources */,
 				E2DEE3BC21023198005725C9 /* GameDefaultRouter.swift in Sources */,
+				E23B91D02105FD8500E621C3 /* UIView+Snapshot.swift in Sources */,
 				E2DEE371210224EB005725C9 /* SelectionDefaultPresenter.swift in Sources */,
 				E2DEE38B21022F9C005725C9 /* CoordinationViewController.swift in Sources */,
 				E23B91982105CE5200E621C3 /* GameSaver.swift in Sources */,
