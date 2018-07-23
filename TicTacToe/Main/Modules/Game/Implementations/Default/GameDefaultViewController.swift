@@ -96,10 +96,9 @@ extension GameDefaultViewController: UICollectionViewDataSource {
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GameCollectionViewCell.defaultReuseIdentifier, for: indexPath) as! GameCollectionViewCell
-        
+
         self.gameBoard.map{
-            let imageName = $0.imageName(indexPath: indexPath)
-            cell.imageView.image = imageName.isEmpty ? nil : UIImage(named: imageName)
+            cell.imageView.image = ImageProvider.shared.image(name: $0.imageName(indexPath: indexPath))
         }
 
         return cell

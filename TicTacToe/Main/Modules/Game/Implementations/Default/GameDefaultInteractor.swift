@@ -16,8 +16,6 @@ class GameDefaultInteractor: GameInteractor {
     fileprivate enum Constants {
         static let xplayerName = "X"
         static let oplayerName = "O"
-        static let xImageName = "x_mark"
-        static let oImageName = "o_mark"
     }
 
     weak var presenter: GamePresenter?
@@ -29,14 +27,14 @@ class GameDefaultInteractor: GameInteractor {
         }
         
         let firstPlayer = xmarkFirstGame ? Player(playerName: Constants.xplayerName,
-                                                  imageName: Constants.xImageName,
+                                                  imageName: ImageProvider.Constants.xImageName,
                                                   positions: []) : Player(playerName: Constants.oplayerName,
-                                                                          imageName: Constants.oImageName,
+                                                                          imageName: ImageProvider.Constants.oImageName,
                                                                           positions: [])
         let secondPlayer =  xmarkFirstGame ? Player(playerName: Constants.oplayerName,
-                                                    imageName: Constants.oImageName,
+                                                    imageName: ImageProvider.Constants.oImageName,
                                                     positions: []) : Player(playerName: Constants.xplayerName,
-                                                                            imageName: Constants.xImageName,
+                                                                            imageName: ImageProvider.Constants.xImageName,
                                                                             positions: [])
         Game.shared.players = [firstPlayer, secondPlayer]
 

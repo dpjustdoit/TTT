@@ -12,6 +12,7 @@
 		E23B91D02105FD8500E621C3 /* UIView+Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23B91CF2105FD8500E621C3 /* UIView+Snapshot.swift */; };
 		E26A09532105BCEB0016533D /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E26A09512105BCEB0016533D /* GoogleMobileAds.framework */; };
 		E26A09542105BCEB0016533D /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = E26A09522105BCEB0016533D /* README.txt */; };
+		E2C819BE21060776003DC5EB /* ImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C819BD21060776003DC5EB /* ImageProvider.swift */; };
 		E2DEE33121022406005725C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DEE33021022406005725C9 /* AppDelegate.swift */; };
 		E2DEE33821022406005725C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2DEE33721022406005725C9 /* Assets.xcassets */; };
 		E2DEE33B21022406005725C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2DEE33921022406005725C9 /* LaunchScreen.storyboard */; };
@@ -72,6 +73,7 @@
 		E23B91CF2105FD8500E621C3 /* UIView+Snapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Snapshot.swift"; sourceTree = "<group>"; };
 		E26A09512105BCEB0016533D /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
 		E26A09522105BCEB0016533D /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		E2C819BD21060776003DC5EB /* ImageProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProvider.swift; sourceTree = "<group>"; };
 		E2DEE32D21022406005725C9 /* TicTacToe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicTacToe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2DEE33021022406005725C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2DEE33721022406005725C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 				E2DEE38A21022F9C005725C9 /* CoordinationViewController.swift */,
 				E23B91CB2105DC3000E621C3 /* CoordinationDefaultBuilder.swift */,
 				E2DEE38E21023037005725C9 /* ViewControllerFactory.swift */,
+				E2C819BD21060776003DC5EB /* ImageProvider.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -522,6 +525,7 @@
 				E2DEE38F21023037005725C9 /* ViewControllerFactory.swift in Sources */,
 				E2DEE375210224EB005725C9 /* SelectionDefaultInteractor.swift in Sources */,
 				E2DEE378210224EB005725C9 /* SelectionRouter.swift in Sources */,
+				E2C819BE21060776003DC5EB /* ImageProvider.swift in Sources */,
 				E2DEE3BA21023198005725C9 /* GameDefaultViewController.swift in Sources */,
 				E2DEE376210224EB005725C9 /* SelectionInteractor.swift in Sources */,
 				E2DEE377210224EB005725C9 /* SelectionViewController.swift in Sources */,
