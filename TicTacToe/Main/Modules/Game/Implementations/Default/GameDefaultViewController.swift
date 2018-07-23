@@ -14,7 +14,7 @@ class GameDefaultViewController: BaseViewController, GameViewController {
 
     fileprivate enum Constants {
         static let bottomSectionInset: CGFloat = 5
-        static let animationDuration: Double = 2
+        static let animationDuration: Double = 1
         static let animationDelay: Double = 0.25
         static let okButtonTitle = "OK"
         static let shareButtonTitle = "SHARE"
