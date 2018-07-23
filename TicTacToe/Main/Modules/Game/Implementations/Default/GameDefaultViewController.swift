@@ -36,10 +36,11 @@ class GameDefaultViewController: BaseViewController, GameViewController {
 
     func showGameOver(title: String, handler: @escaping (() -> ())) {
 
+        self.presenter?.resetData()
+
         let alert = UIAlertController(title: title, message: nil, preferredStyle: .alert)
 
         let okAction = UIAlertAction(title: Constants.okButtonTitle, style: .default, handler: { action in
-            self.dismiss(animated: false, completion: nil)
             handler()
         })
 
@@ -58,8 +59,12 @@ class GameDefaultViewController: BaseViewController, GameViewController {
 
     }
 
-    deinit {
-        self.presenter?.resetData()
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+
+        if self.isMovingFromParentViewController {
+            self.presenter?.resetData()
+        }
     }
 }
 

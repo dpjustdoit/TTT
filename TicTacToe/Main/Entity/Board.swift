@@ -15,7 +15,7 @@ protocol GameBoard {
     func imageName(indexPath: IndexPath) -> String
 }
 
-struct Board {
+struct Board: Codable {
 
     private var grid: [[Cell]]
 
@@ -54,7 +54,7 @@ extension Board: GameBoard {
     }
 }
 
-struct Cell {
+struct Cell: Codable {
     var imageName: String = ""
     var isEmpty: Bool {
         return self.imageName.isEmpty

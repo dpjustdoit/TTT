@@ -12,14 +12,8 @@ class ViewControllerFactory {
 
     private enum Storyboard {
 
-        static let coordinationStoryboardName = "Coordination"
         static let selectionStoryboardName = "Selection"
         static let gameStoryboardName = "Game"
-    }
-
-    private static var coordinationStoryboard: UIStoryboard {
-
-        return UIStoryboard(name: Storyboard.coordinationStoryboardName, bundle: Bundle(for: ViewControllerFactory.self))
     }
 
     private static var selectionStoryboard: UIStoryboard {
@@ -30,13 +24,6 @@ class ViewControllerFactory {
     private static var gameStoryboard: UIStoryboard {
 
         return UIStoryboard(name: Storyboard.gameStoryboardName, bundle: Bundle(for: ViewControllerFactory.self))
-    }
-
-    class func makeCoordinationNavigationViewController() -> UIViewController {
-
-        let coordinationNavigationViewController = self.coordinationStoryboard.instantiateInitialViewController()
-
-        return coordinationNavigationViewController as! CoordinationNavigationViewController
     }
 
     class func makeSelectionDefaultViewController() -> SelectionDefaultViewController {

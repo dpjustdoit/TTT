@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E23B91982105CE5200E621C3 /* GameSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23B91972105CE5200E621C3 /* GameSaver.swift */; };
+		E23B91CC2105DC3000E621C3 /* CoordinationDefaultBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23B91CB2105DC3000E621C3 /* CoordinationDefaultBuilder.swift */; };
 		E26A09532105BCEB0016533D /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E26A09512105BCEB0016533D /* GoogleMobileAds.framework */; };
 		E26A09542105BCEB0016533D /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = E26A09522105BCEB0016533D /* README.txt */; };
 		E2DEE33121022406005725C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DEE33021022406005725C9 /* AppDelegate.swift */; };
@@ -27,7 +29,7 @@
 		E2DEE3852102281F005725C9 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DEE3822102281F005725C9 /* Game.swift */; };
 		E2DEE3862102281F005725C9 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DEE3832102281F005725C9 /* Player.swift */; };
 		E2DEE38821022856005725C9 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DEE38721022856005725C9 /* BaseViewController.swift */; };
-		E2DEE38B21022F9C005725C9 /* CoordinationNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DEE38A21022F9C005725C9 /* CoordinationNavigationViewController.swift */; };
+		E2DEE38B21022F9C005725C9 /* CoordinationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DEE38A21022F9C005725C9 /* CoordinationViewController.swift */; };
 		E2DEE38D21022FBE005725C9 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DEE38C21022FBE005725C9 /* BaseNavigationController.swift */; };
 		E2DEE38F21023037005725C9 /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DEE38E21023037005725C9 /* ViewControllerFactory.swift */; };
 		E2DEE391210230A9005725C9 /* Selection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2DEE390210230A9005725C9 /* Selection.storyboard */; };
@@ -64,6 +66,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E23B91972105CE5200E621C3 /* GameSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSaver.swift; sourceTree = "<group>"; };
+		E23B91CB2105DC3000E621C3 /* CoordinationDefaultBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinationDefaultBuilder.swift; sourceTree = "<group>"; };
 		E26A09512105BCEB0016533D /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
 		E26A09522105BCEB0016533D /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		E2DEE32D21022406005725C9 /* TicTacToe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicTacToe.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,7 +94,7 @@
 		E2DEE3822102281F005725C9 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		E2DEE3832102281F005725C9 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		E2DEE38721022856005725C9 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		E2DEE38A21022F9C005725C9 /* CoordinationNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinationNavigationViewController.swift; sourceTree = "<group>"; };
+		E2DEE38A21022F9C005725C9 /* CoordinationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinationViewController.swift; sourceTree = "<group>"; };
 		E2DEE38C21022FBE005725C9 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		E2DEE38E21023037005725C9 /* ViewControllerFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
 		E2DEE390210230A9005725C9 /* Selection.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Selection.storyboard; sourceTree = "<group>"; };
@@ -219,7 +223,8 @@
 			isa = PBXGroup;
 			children = (
 				E2DEE392210230BD005725C9 /* Coordination.storyboard */,
-				E2DEE38A21022F9C005725C9 /* CoordinationNavigationViewController.swift */,
+				E2DEE38A21022F9C005725C9 /* CoordinationViewController.swift */,
+				E23B91CB2105DC3000E621C3 /* CoordinationDefaultBuilder.swift */,
 				E2DEE38E21023037005725C9 /* ViewControllerFactory.swift */,
 			);
 			path = Common;
@@ -290,6 +295,7 @@
 				E2DEE3812102281F005725C9 /* Board.swift */,
 				E2DEE3822102281F005725C9 /* Game.swift */,
 				E2DEE3832102281F005725C9 /* Player.swift */,
+				E23B91972105CE5200E621C3 /* GameSaver.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -519,9 +525,11 @@
 				E2DEE3C221023198005725C9 /* GameRouter.swift in Sources */,
 				E2DEE3BC21023198005725C9 /* GameDefaultRouter.swift in Sources */,
 				E2DEE371210224EB005725C9 /* SelectionDefaultPresenter.swift in Sources */,
-				E2DEE38B21022F9C005725C9 /* CoordinationNavigationViewController.swift in Sources */,
+				E2DEE38B21022F9C005725C9 /* CoordinationViewController.swift in Sources */,
+				E23B91982105CE5200E621C3 /* GameSaver.swift in Sources */,
 				E2DEE38D21022FBE005725C9 /* BaseNavigationController.swift in Sources */,
 				E2DEE3C7210269A0005725C9 /* GameCollectionViewCell.swift in Sources */,
+				E23B91CC2105DC3000E621C3 /* CoordinationDefaultBuilder.swift in Sources */,
 				E2DEE33121022406005725C9 /* AppDelegate.swift in Sources */,
 				E2DEE3BD21023198005725C9 /* GameDefaultPresenter.swift in Sources */,
 				E2DEE372210224EB005725C9 /* SelectionDefaultRouter.swift in Sources */,

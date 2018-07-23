@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Player {
+struct Player: Codable {
     let playerName: String
     let imageName: String
     var positions: [IndexPath]

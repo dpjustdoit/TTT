@@ -8,18 +8,23 @@
 
 import Foundation
 
-class Game {
+class Game: Codable {
 
-    static let shared = Game()
+    static let shared: Game = {
 
-    let boardSize: Int = 3
+        guard let game = GameSaver().restoreGame() else {
+            return Game(boardSize: 3)
+        }
+
+        return game
+    }()
+
+    let boardSize: Int
     var players: [Player] = []
     var isDraw: Bool = false
     private var currentPlayerIndex: Int = 0
 
-    lazy var board: Board = {
-        return Board(size: self.boardSize)
-    }()
+    var board: Board
 
     var isGameInProgress: Bool {
         return !self.players.isEmpty
@@ -47,6 +52,7 @@ class Game {
         self.isDraw = false
         self.currentPlayerIndex = 0
         self.board = Board(size: self.boardSize)
+        GameSaver().clearSaves()
     }
 
     private func checkWinner(indexPath: IndexPath) -> Bool {
@@ -111,6 +117,12 @@ class Game {
         return false
     }
 
-    init() {
+    init(boardSize: Int) {
+        self.boardSize = boardSize
+        self.board = Board(size: self.boardSize)
     }
 }
+
+
+
+

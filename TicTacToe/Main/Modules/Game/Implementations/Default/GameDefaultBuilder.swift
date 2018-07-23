@@ -11,7 +11,7 @@ import UIKit
 
 class GameDefaultBuilder {
 
-    func main(xmarkFirstGame: Bool) -> UIViewController {
+    func main(xmarkFirstGame: Bool = false) -> UIViewController {
         let view = ViewControllerFactory.makeGameDefaultViewController()
         let interactor = GameDefaultInteractor()
         let presenter = GameDefaultPresenter(xmarkFirstGame: xmarkFirstGame)

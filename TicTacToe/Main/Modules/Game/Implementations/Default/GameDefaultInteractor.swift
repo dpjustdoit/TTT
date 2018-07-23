@@ -23,6 +23,10 @@ class GameDefaultInteractor: GameInteractor {
     weak var presenter: GamePresenter?
 
     func gameBoard(xmarkFirstGame: Bool) -> GameBoard {
+
+        guard !Game.shared.isGameInProgress else {
+            return Game.shared.board
+        }
         
         let firstPlayer = xmarkFirstGame ? Player(playerName: Constants.xplayerName,
                                                   imageName: Constants.xImageName,
